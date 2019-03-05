@@ -1,23 +1,19 @@
-def classify_triangle(a,b,c):
-#the letters abc represent the three sides of a given triangle
-#The goal of this function is to classify that given triangle into its type
-#Types are
-
-    if a == b == c:
-        print("Equilateral Triangle")
-    elif a == b or b == c or a == c:
-        print("Isosceles triangle")
+def classify_triangle(side_a, side_b, side_c):
+    # the letters abc represent the three sides of a given triangle
+    # The goal of this function is to classify that given triangle into its type
+    # Types are
+    triangle = str("Triangle Classification")
+    side_a = int(input("a: "))
+    side_b = int(input("b: "))
+    side_c = int(input("c: "))
+    if side_a == side_b == side_c:
+        triangle = str("Equilateral triangle")
+    elif side_a == side_b or side_b == side_c or side_a == side_c:
+        triangle = str("Isosceles triangle")
     else:
-        print("Scalene triangle")
+        triangle = str("Scalene triangle")
+    print("Triangle is classified as: " + triangle)
 
 
-    #these if statements first check to see if all
-    #sides are equal, then if two are, then if none are equal
-
-def main():
-    classify_triangle(3,3,3)
-
-
-if __name__ == "__main__":
-    main()
+classify_triangle(0, 0, 0)
 
